@@ -34,7 +34,7 @@ DevOps engineers bridge the gap between development and operations by automating
 * Collaborate with development, operations, and security teams
 
 ## 6. **What are the different phases in DevOps?**:
-
+  ![The Google Logo](/media/devopsimage.png)
  * <mark> Plan:</mark> Initially, there should be a plan for the type of application that needs to be
  developed. Getting a rough picture of the development process is always a good
  idea.

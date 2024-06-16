@@ -7,7 +7,7 @@ A culture and practices aimed at bringing development (Dev) and operations (Ops)
 #### DevSecOps: 
 An extension of DevOps that integrates security (Sec) from the beginning of the development cycle. DevSecOps aims to make security an integral part of the development and delivery process, rather than treating it as a final or separate step.
 
-![The Google Logo](/media\devsecops.webp)
+![Alt text](/media/devsecops.webp)
 
 ## 2. **Principles of DevSecOps**:
 ### 2.1 **Automation**:
