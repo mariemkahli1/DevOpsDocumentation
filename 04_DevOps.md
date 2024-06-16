@@ -23,7 +23,7 @@ the goal of DevOps is to automate and integrate the processes between software d
 * Manual deployments and infrastructure configurations are slow and error-prone.
 ### 3.5 **Lack of automation**
 
-## 4. ** DevOps Solution**:
+## 4. **DevOps Solution**:
 DevOps engineers bridge the gap between development and operations by automating the software development lifecycle (SDLC), ensuring seamless and efficient collaboration between the two teams.
 
 ## 5. **Role od DevOps Engineer**:
@@ -67,3 +67,5 @@ DevOps engineers bridge the gap between development and operations by automating
 | ----- | ------- |
 | Ensures code can be safely deployed on toproduction | Every change that passes the automated tests is deployed toproduction automatically     |
 | Delivers every change to a production-like environment through rigorous automated testing  | There is no explicit approval from a developer and requires a developed culture of monitoring |
+## 10. **Continuous Improvement**:
+DevOps is an ongoing process. Continuous Improvement involves regularly reviewing all stages of the lifecycle to find ways to enhance the process. It means learning from experiences and making adjustments to improve speed, quality, and reliability.
