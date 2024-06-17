@@ -62,4 +62,4 @@ By integrating Jenkins with security monitoring tools, DevOps teams can continuo
 
 - **Automation and Reporting:** Automate the generation of reports on security tests and scan results for increased visibility and proactive risk management.
 
-![Alt text](/media/Jenkins image.jpg)
+![Alt text](/media/jenkinsimg.jpg)
