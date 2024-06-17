@@ -2,77 +2,64 @@
 
 ---
 
-## 1.What is Jenkins
+## 1. **What is Jenkins?**:
 
-Jenkins is an open-source automation tool used in DevSecOps to help with continuous integration (CI) and continuous deployment (CD). In DevSecOps, Jenkins helps to add security checks into the software development pipeline, automating security tests and compliance checks throughout the development lifecycle. This helps to find and fix security issues early in the development process.CI/CD servers, including Jenkins, allow your team to set up the tests that you need to run. Jenkins helps structure the build cycle of a remote team.
-It works with any programming language and for multiple platforms including Windows, Linux and macOS.
+Jenkins is an open-source continuous integration tool widely used in software development. It automates repetitive steps in the development process such as compiling source code, running unit tests, and deploying applications.
 
-## 2. Main Features
+## 2. **Why use Jenkins?**:
 
-- <mark>Build Automation:</mark> Jenkins compiles and builds your source code automatically, reducing human error and speeding up development.
-- <mark>Automated Testing:</mark> It integrates with various testing frameworks to run tests automatically after each build.
-- <mark>Continuous Deployment:</mark> Jenkins can automatically deploy your code to different environments after a successful build.
-- <mark>Extensibility:</mark> Jenkins has over 1500 plugins that allow you to extend its functionalities to work with various tools and technologies in software development.
+- **Automation of Repetitive Tasks:** Jenkins automates processes like compilation and testing, reducing human errors and speeding up development.
 
-## 3.Architecture and Workflow
+- **Continuous Integration:** Jenkins facilitates frequent integration of code changes into a project, ensuring better software quality.
 
-- <mark>Jenkins Server:</mark> The central system where CI/CD tasks are executed.
-- <mark>Jenkins Nodes:</mark> Machines that run tasks as directed by the Jenkins server, distributing the workload.
-- <mark>Pipelines:</mark> Written as code (in a Jenkinsfile), pipelines describe the steps in the CI/CD process, making it reproducible and version-controlled.
+- **Support for Numerous Plugins:** Jenkins has a vast library of plugins that extend its functionality, covering various tools and technologies.
 
-## 3.Benefits of Jenkins
+## 3. **Basic Concepts**:
 
-- <mark>Automation:</mark> Reduces time and errors associated with manual processes.
-- <mark>Fast Issue Detection:</mark> Frequent builds help quickly identify bugs, allowing for faster fixes.
-- </mark>Flexibility:</mark> Works with many version control systems, programming languages, and testing frameworks.
-- <mark>Active Community:</mark> A large number of users and developers contribute to improving the tool and its plugins continuously.
-- <mark>plugins:</mark>a well-known tool with lots of community support, there are many plugins available (including well-known names like Slack, GitHub, Docker, Build Pipeline + more)
+### <mark> Jobs </mark>
 
-## 4.Typical Use Case
+A Jenkins job represents an automated task, such as compiling a project or running tests. Each job has specific configurations defining how and when it should be executed.
 
-1. <mark>Code Commit:</mark> Developers push their code to a version control repository (like Git).
-2. <mark>Automatic Build:</mark> Jenkins detects the change and triggers an automatic build.
-3. <mark>Test Execution:</mark> Runs unit and integration tests.
-4. <mark>Deployment:</mark> If tests pass, the code is deployed to a staging or production environment
+### <mark> Build </mark>
 
-## Link training in Jenkins on linkedin
+A build refers to the execution of a Jenkins job. During a build, Jenkins takes the source code and applies defined steps from the job, such as compilation and testing.
 
-https://www.linkedin.com/learning/l-essentiel-de-jenkins
+### <mark> Pipeline </mark>
 
-Jenkins is a powerful tool for automating software development processes. It helps teams focus on writing quality code while reducing the time needed to deliver new features and bug fixes. When used properly, Jenkins makes CI/CD processes smoother and more reliable.
+A Jenkins pipeline is a set of connected jobs arranged in a defined sequence, forming an automated workflow. Pipelines can be simple or complex, with conditions and parallel stages.
 
-## 5.How to Install Jenkins in Ubuntu
+## 4. **Integration of Security with Jenkins in DevSecOps**:
 
-![Alt text](/media/Jenkins.png.png)
+### 4.1 **Automated Security Scanning**:
 
-**_Attention_**
-Make sure you choose a machine with at least 1GB of RAM. If you don’t have enough internal memory, Jenkins won’t run. For decent performance, 2 to 4GB is ideal.
+Jenkins can be configured to run automated security scanning tools such as SonarQube, OWASP Dependency-Check, and other static security analysis tools. These scans can be integrated into Jenkins pipelines to identify and report vulnerabilities early in the build stage.
 
-### Step 1: Install Jenkins Using your Package Manager
+### 4.2 **Automated Security Testing**:
 
-On Ubuntu you can do this with:
-wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key |
+By integrating automated security testing into Jenkins pipelines, DevOps teams can automatically check for vulnerabilities and potential weaknesses in code and configurations, ensuring better quality and reducing security risks.
 
-sudo apt-key add
+### 4.3 **Automated Compliance Checks**:
 
-echo "deb http://pkg.jenkins.io/debian-stable binary/" | sudo tee /etc/apt/sources.list.d/jenkins.list
+Jenkins can also automate compliance checks against security standards and company policies. For instance, it can verify if security configurations are correctly applied in deployment environments.
 
-sudo apt-get update && sudo apt-get -y install Jenkins
+### 4.4 **Secure Deployments**:
 
-**_Note:_** You have other installation options including two different release lines. See https://jenkins.io/download/ to learn the difference between weekly release and LTS (long-term support) options. Once installed, Jenkins will be running on port 8080. If you are accessing this server remotely, make sure to open the port 8080 in your firewall.
+Using Jenkins to automate deployments, Continuous Deployment (CD) practices can include automated security validation mechanisms. This ensures that only secure and compliant versions are deployed into production.
 
-### Step 2: Open Your Browser
+### 4.5 **Secrets and Access Management**:
 
-In your browser, go to http://your-ci-server-name.com:8080. If your machine is running Jenkins, the window should display the setup wizard.
+Jenkins supports integration with secrets and access management tools such as Vault or AWS Secrets Manager, securing the management of sensitive information used in pipelines (e.g., API keys or tokens).
 
-### Step 3: Unlocking Jenkins
+### 4.6 **Security Monitoring**:
 
-In order to ensure that you’re the real administrator of the machine, the password has been written to a specified log file. In a fresh terminal, type in sudo cat and then paste in the pathway provided on this page in order to get a temporary password. Then you can enter the password in the Administrator password field in your browser.
+By integrating Jenkins with security monitoring tools, DevOps teams can continuously monitor development and production environments to detect and respond quickly to potential threats.
 
-### Step 4: Customizing Jenkins Plugins
+## 5. **Best Practices**:
 
-You can go ahead and click the Install the suggested plugins box. This will activate the download of a handful of useful plugins, including Git and some Pipeline plugins. You can always download other plugins as necessary to supplement these pre-selected options.
+- **Pipeline as Code**: Define your Jenkins pipelines as code (Pipeline as Code) for easy management, reproducibility, and reuse.
 
-### Step 5: Create Admin Login
+- **Early Security Integration:** Integrate security analyses early in the development process to identify and address vulnerabilities sooner.
 
-You can create your user account by adding a username, entering a new password, and including a full name and email address. Once you’re in Jenkins, you can choose to enable new users which will allow colleagues to create additional logins as needed.
+- **Automation and Reporting:** Automate the generation of reports on security tests and scan results for increased visibility and proactive risk management.
+
+
