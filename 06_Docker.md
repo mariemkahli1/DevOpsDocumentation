@@ -12,7 +12,9 @@ Docker is a tool designed to simplify the creation, deployment, and execution of
 - **Registry:** A repository for storing and distributing Docker images. Docker Hub is a popular example of a public registry.
 - **Docker Engine:** The core component of Docker, Docker Engine is a client-server application that includes a server (a long-running daemon process), a REST API for interacting with the daemon, and a command-line interface (CLI) client.
 
-## <mark> 3. **Docker Image**: </mark>
+***
+
+##  3. **Docker Image**: 
 
 ### 3.1 **Build an image from a Dockerfile:**:
 
@@ -54,7 +56,9 @@ Docker is a tool designed to simplify the creation, deployment, and execution of
 
           docker image  prune
 
-## <mark> 4. **Docker Container**: </mark>
+***
+
+##  4. **Docker Container**: 
 
 ### 4.1 **Run a new container from an image:**
 
@@ -112,7 +116,9 @@ Docker is a tool designed to simplify the creation, deployment, and execution of
 
          docker unpause  container_name_or_id
 
-## <mark> 5. **Docker Compose**: </mark>
+*** 
+
+##  5. **Docker Compose**: 
 
 ### 5.1 **Create and start containers defined in a docker-compose.yml file**:
 This command reads the docker-compose.yml file and starts the defined services in the background. 
@@ -159,5 +165,5 @@ This command unpauses the specified service.
             docker  unpause service_name 
 ### 5.11 **View details of a service**:
    Provides detailed information about a specific service
-   
+
            docker compose ps service_name 
