@@ -113,3 +113,51 @@ Docker is a tool designed to simplify the creation, deployment, and execution of
          docker unpause  container_name_or_id
 
 ## <mark> 5. **Docker Compose**: </mark>
+
+### 5.1 **Create and start containers defined in a docker-compose.yml file**:
+This command reads the docker-compose.yml file and starts the defined services in the background. 
+
+         docker compose up
+### 5.2 **Stop and remove containers defined in a docker-compose.yml file**:
+ This command stops & removes the containers, networks, and volumes defined in the docker-compose.yml file.
+
+         docker compose down
+### 5.3 **Build or rebuild services**:
+This command builds or rebuilds the Docker images for the 
+services defined in the docker compose.yml file.
+
+          docker compose build 
+### 5.4 **List containers for a specific Docker Compose project**:
+This command lists the containers for the services defined 
+in the docker-compose.yml file.
+
+            docker compose ps
+### 5.5 **View logs for services**:
+This command displays the logs for the services defined in the docker-compose.yml file.
+
+             docker compose logs
+### 5.6 **Scale services to a specific number of containers**:
+This command scales the services defined in the docker-compose.yml file to the specified number of containers.
+
+          docker compose up -d --scale 
+           service_name=number_of_containers
+### 5.7 **Run a one-time command in a service**:
+             docker compose run service_name command 
+### 5.8 **List all volumes:**
+ Docker Compose creates volumes for services. This 
+command helps you see them.
+
+             docker volume ls 
+### 5.9 **Pause a service**:
+This command pauses the specified service.
+
+                docker  pause service_name
+
+### 5.10 **Unpause a service**:
+This command unpauses the specified service.
+
+            docker  unpause service_name 
+### 5.11 **View details of a service**:
+   Provides detailed information about a specific service
+   
+           docker compose ps service_name 
