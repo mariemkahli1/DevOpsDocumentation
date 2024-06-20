@@ -63,3 +63,93 @@ By integrating Jenkins with security monitoring tools, DevOps teams can continuo
 - **Automation and Reporting:** Automate the generation of reports on security tests and scan results for increased visibility and proactive risk management.
 
 ![Alt text](/media/jenkinsimg.jpg)
+
+## 6. **What is Jenkins Pipeline**:
+
+A pipeline jenkins is a user-defined model of CD pipeline. A pipeline code defines your entire build process , which typically includes stages for building an application , testing and then delevring it .
+
+![Alt text](/media/jenkinsPipeline.png)
+
+
+## 7. **Why Pipeline**:
+
+- **Code:** Pipelines are implemented in code and typically checked into source control, giving teams the ability to edit, review, and iterate upon their delivery pipeline.
+
+- **Durable:** Pipelines can survive both planned and unplanned restarts of the Jenkins controller.
+
+- **Pausable:** Pipelines can optionally stop and wait for human input or approval before continuing the Pipeline run.
+
+- **Versatile:** Pipelines support complex real-world CD requirements, including the ability to fork/join, loop, and perform work in parallel.
+
+- **Extensible:** The Pipeline plugin supports custom extensions to its DSL and multiple options for integration with other plugins.
+
+
+## 8. **Scripted and Declarative  Pipeline fundamentals**:
+
+ ### 8.1 **Scripted Pipeline**:
+  
+- bit harder due to more groovy 
+- try-retry-loop
+- groovy editor 
+- more flexible for power users and complex requirments 
+
+         node {
+         stage('Build') {
+        //
+       }
+       stage('Test') {
+        //
+       }
+      stage('Deploy') {
+        //
+      }
+      }
+
+- Execute this Pipeline or any of its stages, on any available agent.
+- Defines the "Build" stage. stage blocks are optional in Scripted 
+Pipeline syntax. However, implementing stage blocks in a Scripted Pipeline provides clearer visualization of each stage's subset of tasks/steps in the Jenkins UI.
+- Perform some steps related to the "Build" stage.
+- Defines the "Test" stage.
+- Perform some steps related to the "Test" stage.
+- Defines the "Deploy" stage.
+- Perform some steps related to the "Deploy" stage.
+
+### 8.2 **Declarative Pipeline**:
+
+- easy to use 
+- more cincise and easy to read 
+- validation before running 
+- visual editor 
+- perfect for regular user
+
+      pipeline {
+       agent any
+       stages {
+        stage('Build') {
+            steps {
+                //
+            }
+        }
+        stage('Test') {
+            steps {
+                //
+            }
+        }
+        stage('Deploy') {
+            steps {
+                //
+            }
+        }
+        }
+      }
+
+- Execute this Pipeline or any of its stages, on any available agent.
+- Defines the "Build" stage.
+- Perform some steps related to the "Build" stage.
+- Defines the "Test" stage.
+- Perform some steps related to the "Test" stage.
+- Defines the "Deploy" stage.
+- Perform some steps related to the "Deploy" stage.
+
+## 9. **Blue Ocean**:
+Blue Ocean is a new user experience for Jenkins that provides a simplified and more intuitive way to create and
