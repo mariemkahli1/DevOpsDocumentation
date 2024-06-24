@@ -14,6 +14,16 @@ Docker is a tool designed to simplify the creation, deployment, and execution of
 
 ***
 
+### **Initialize Docker inside an application**:
+
+              docker init
+
+### **Watch the service/container of an application**
+It watches build context for service and rebuild/refresh 
+containers when files are updated .
+
+                docker compose watch
+
 ##  3. **Docker Image**: 
 
 ### 3.1 **Build an image from a Dockerfile:**:
@@ -70,7 +80,7 @@ Docker is a tool designed to simplify the creation, deployment, and execution of
 
 ### 4.3 **List all running containers:**
 
-         dockerps
+         docker ps
 
 ### 4.4 **List all containers (including stopped ones):**
 
@@ -167,3 +177,102 @@ This command unpauses the specified service.
    Provides detailed information about a specific service
 
            docker compose ps service_name 
+
+## 6. **Dockerfile**
+
+ A Dockerfile is a script that contains instructions for 
+building a Docker image. It defines the base image, sets up 
+environment variables, installs software, and configures 
+the container for a specific application or service.
+
+### 6.1 **FROM**
+ Specifies the base image for the Docker image.
+
+          FROM ubuntu:20.04
+### 6.2 **WORKDIR**
+ Sets the working directory for subsequent instructions.
+  
+           WORKDIR /path/to/directory
+### 6.3 **COPY**
+Copies files or directories from the build context to the 
+container
+
+             COPY . .
+### 6.4 **RUN**
+ Executes commands in the shell. 
+
+              RUN apt-get update  apt-get install -y curl
+### 6.5 **ENV**
+ Sets environment variables in the image.
+
+               ENV NODE_VERSION=14
+### 6.6 **EXPOSE**
+ Informs Docker that the container listens on specified network ports at runtime.
+
+                    EXPOSE port
+### 6.7 **CMD**
+Provides default commands or parameters for an executing container.
+
+           CMD ["executable","param1","param2"] 
+
+             CMD executable param1 param2
+### 6.8 **ENTRYPOINT**
+ Configures a container that will run as an executable.
+          
+              ENTRYPOINT ["executable","param1","param2"]
+
+              ENTRYPOINT executable param1 param2
+### 6.9 **ARG**
+Defines variables that users can pass at build-time to the 
+builder with the docker build command.
+
+                ARG VERSION=latest
+
+### 6.10 **VOLUME**
+ Creates a mount point for external volumes or other 
+containers. 
+
+               VOLUME /path/to/volume
+### 6.11 **LABEL**
+Adds metadata to an image in the form of key-value pairs.
+
+                    LABEL key="value"
+### 6.12 **USER**
+ Specifies the username or UID to use when running the 
+image.
+
+                 USER app
+
+### 6.13 **ADD**
+Copies files or directories and can extract tarballs in the 
+process.Similar to COPY, but with additional capabilities (e.g., 
+extracting archives).
+               ADD source_path destination_path
+                
+ **DockerFile Example**
+
+             # Use an official Node.js runtime as a base image 
+              FROM node:20-alpine 
+
+               # Set the working directory to /app 
+                 WORKDIR /app 
+
+             # Copy package.json and package-lock.json to the working 
+               directory 
+
+                COPY package*.json ./ 
+
+             # Install dependencies 
+               RUN npm install 
+
+             # Copy the current directory contents to the container 
+              COPY . .
+
+              # Expose port 8080 to the outside world  
+               EXPOSE 8080
+ 
+              # Define environment variable 
+               ENV NODE_ENV=production  
+
+              # Run app.js when the container launches 
+                CMD node app.js
