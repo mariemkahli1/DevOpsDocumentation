@@ -82,4 +82,5 @@ define different types of Services such as ClusterIP, NodePort, or LoadBalancer.
 ![Texte alternatif](/media/seryaml.png)
 
 **Managing Services**
+
 ![Texte alternatif](/media/serconf.png)
