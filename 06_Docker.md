@@ -14,7 +14,7 @@ Docker is a tool designed to simplify the creation, deployment, and execution of
 
 ***
 
-### **Initialize Docker inside an application**:
+### **Initialize Docker inside an application**
 
               docker init
 
@@ -30,7 +30,7 @@ containers when files are updated .
 
      docker build -t  image_name path_to_dockerfile
 
-### 3.2 ** List all local images:**:
+### 3.2 **List all local images:**:
 
       docker images
 
