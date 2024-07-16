@@ -15,7 +15,7 @@
 
 This command lists all the nodes in the Kubernetes cluster.
 
-             kubectl get nodes
+      kubectl get nodes
 
 **Output**
 
