@@ -1,3 +1,0 @@
-# Dockle 
-
-**What is Dockle**
