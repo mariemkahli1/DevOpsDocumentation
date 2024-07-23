@@ -228,7 +228,7 @@ Stop and delete the Minikube cluster
    minikube delete
    ```
 
----
+
 
 ## 5. Set up Minikube (image built from Dockerfile)
 
