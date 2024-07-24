@@ -251,7 +251,7 @@ eval $(minikube docker-env)
 If you haven't already built the Docker image, you can build it inside Minikube's Docker daemon. If the image is already built on your local system, you can retag it.
 
 ```sh
-docker build -t flare-bank:testing .
+docker build -t flare-bank:latest .
 ```
 
 #### 4. Verify the Image
