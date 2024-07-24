@@ -122,7 +122,7 @@ eval $(minikube docker-env)
 #### 3.3. Pull the image from the repository
 
 ```sh
-docker pull oussamaslimani2001/flare-bank:testing
+docker pull mariem820/flare-bank:latest
 ```
 
 #### 3.4. Verify the Image
