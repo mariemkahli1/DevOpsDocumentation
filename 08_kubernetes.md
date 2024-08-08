@@ -154,10 +154,9 @@ spec:
     spec:
       containers:
         - name: flare-bank
-          image: oussamaslimani2001/flare-bank:testing
+          image: mariem820/flare-bank:latest
           ports:
             - containerPort: 80
-```
 
 - Apply the Deployment:
 
