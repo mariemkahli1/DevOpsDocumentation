@@ -158,7 +158,9 @@ spec:
           ports:
             - containerPort: 80
 
+
 - Apply the Deployment:
+
 
 ```sh
 kubectl apply -f deployment.yaml
