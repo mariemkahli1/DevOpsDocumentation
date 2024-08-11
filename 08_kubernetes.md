@@ -157,7 +157,7 @@ spec:
           image: mariem820/flare-bank:latest
           ports:
             - containerPort: 80
-
+```
 
 - Apply the Deployment:
 
