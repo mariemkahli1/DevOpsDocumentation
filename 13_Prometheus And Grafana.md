@@ -89,7 +89,6 @@ kubectl create namespace monitoring
 
 ### Install Prometheus using Helm
 
-Install Prometheus
 
 ```sh
 helm install prometheus prometheus-community/prometheus --namespace monitoring
